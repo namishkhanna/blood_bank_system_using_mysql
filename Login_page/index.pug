@@ -1,0 +1,44 @@
+.form_wrapper
+  .form_container
+    .title_container
+      h2 Responsive Login Form
+    .row.clearfix
+      .col_half
+        .social_btn.fb
+          a(href='#')
+            span
+              i.fa.fa-facebook(aria-hidden='true')
+            | Sign in with Facebook
+        .social_btn.tw
+          a(href='#')
+            span
+              i.fa.fa-twitter(aria-hidden='true')
+            | Sign in with Twitter
+        .social_btn.gplus
+          a(href='#')
+            span
+              i.fa.fa-google-plus(aria-hidden='true')
+            | Sign in with Google+
+        .row.clearfix.create_account
+          div
+            a(href='#') Create an Account
+      .col_half.last
+        form
+          .input_field
+            span
+              i.fa.fa-envelope(aria-hidden='true')
+            input(type='email', name='email', placeholder='Email', required='')
+          .input_field
+            span
+              i.fa.fa-lock(aria-hidden='true')
+            input(type='password', name='phone', placeholder='Password', required='')
+          input.button(type='submit', value='Sign in')
+          .row.clearfix.bottom_row
+            .col_half.remember_me
+              input(name='', type='checkbox', value='')
+              |               Remember me
+            .col_half.forgot_pw
+              a(href='#') Forgot Password?
+p.credit
+  | Developed by 
+  a(href='http://www.designtheway.com/responsive-login-form/', target='_blank') Design the way

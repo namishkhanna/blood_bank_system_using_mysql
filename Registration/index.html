@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registration Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="../img/download.png" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="../css/custom.css" rel="stylesheet">
+
+<!-- Helper Styles -->
+<link href="../css/loaders.css" rel="stylesheet">
+<link href="../css/swiper.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/animate.min.css">
+<link rel="stylesheet" href="../css/nivo-lightbox.css">
+<link rel="stylesheet" href="../css/nivo_themes/default/default.css">
+<!-- Font Awesome Style -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
+
+</head>
+<body>
+  <nav class="navbar navbar-toggleable-md mb-4 top-bar navbar-static-top sps sps--abv">
+    <div class="container">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html">Blood<span>Bank</span></a>
+  <div class="collapse navbar-collapse" id="navbarCollapse1">
+    <ul class="navbar-nav ml-auto">
+     <li class="nav-item"> <a class="nav-link" href="../index.html">Home </a> </li>
+    <li class="nav-item active"> <a class="nav-link" href="../Registration/index.html">Register <span class="sr-only">(current)</span></a> </li>
+    <li class="nav-item "> <a class="nav-link" href="../Login_page/index.html">login</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="../index.html#blog">Website</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="../index.html#gallery">Image Gallery</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="../index.html#contact-sec">Contact</a> </li>
+    </ul>
+  </div>
+        </div>
+</nav>
+
+<!--<button class="btn btn-primary float-right" id="formButton" onClick = "myFunction(),this.style.visibility= 'hidden';"></button>
+<form id="contact" action="insert1.php" method="POST">
+-->
+<div class="container" style="padding-top:5%;">
+            <form class="form-horizontal" role="form" action="insert1.php" method="POST">
+                <h2>Registration</h2>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">First Name*</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" class="form-control" autofocus required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName" class="col-sm-3 control-label">Last Name*</label>
+                    <div class="col-sm-9">
+                        <input type="text" name ="lastName" id="lastName" placeholder="Last Name" class="form-control" autofocus required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email* </label>
+                    <div class="col-sm-9">
+                        <input type="email" id="email" name="email" placeholder="Email" class="form-control" name= "email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password*</label>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" name="password" placeholder="Password" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Confirm Password*</label>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" name="password" placeholder="Password" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate" class="col-sm-3 control-label">Date of Birth*</label>
+                    <div class="col-sm-9">
+                        <input type="date" id="birthDate" name="birthDate" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber" class="col-sm-3 control-label">Phone number* </label>
+                    <div class="col-sm-9">
+                        <input type="phoneNumber" id="phoneNumber" name="phoneNumber" placeholder="Phone number" class="form-control" maxlength="10" pattern="^\d{10}$" required>
+                        <span class="help-block">Your phone number won't be disclosed anywhere </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <label for="pincode" class="col-sm-3 control-lable">Pin Code*</label>
+                        <div class="col-sm-9">
+                            <input type="pincode" id="pincode" name="pincode" placeholder="Pincode" class="form-control" maxlength="6" pattern="^\d{6}$" required>
+                        </div>
+                </div>
+                
+                <div class="form-group">
+                        <label for="bloodgroup" class="col-sm-3 control-label">Blood Group* </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="bloodgroup" name="bloodgroup" placeholder="Please write your Blood Group" class="form-control" maxlength="4" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                        <label for="Height" class="col-sm-3 control-label">Height* </label>
+                    <div class="col-sm-9">
+                        <input type="number" id="height" name="height" placeholder="Please write your height in centimetres" class="form-control" maxlength="4" pattern="^\d{4}$" required>
+                    </div>
+                </div>
+                 <div class="form-group">
+                        <label for="weight" class="col-sm-3 control-label">Weight* </label>
+                    <div class="col-sm-9">
+                        <input type="number" id="weight" name="weight" placeholder="Please write your weight in kilograms" class="form-control" maxlength="4" pattern="^\d{4}$" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                        <label for="gender" class="col-sm-3 control-label">Gender* </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="gender" name="gender" placeholder="Please write your Gender" class="form-control" maxlength="6" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                        <label for="category" class="col-sm-3 control-label">Category* </label>
+                    <div class="col-sm-9">
+                        <input type="text" id="category" name="category" placeholder="Please write Donor or Receiver" class="form-control" maxlength="10" required>
+                    </div>
+                </div>
+                
+                
+                <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <span class="help-block">*Required fields</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form> <!-- /form -->
+        </div> <!-- ./container -->
+
+</body>
+
+<script>
+function myFunction() {
+var x = document.getElementById("infobutton");
+if (x.style.display === "none") {
+    x.style.display = "block";
+} else {
+    x.style.display = "none";
+}
+}
+</script>
+
+</html>
