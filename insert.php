@@ -11,7 +11,7 @@ if (!empty($name) || !empty($email)  || !empty($phone)  || !empty($feedback))
 $host="localhost";
 $dbUsername ="root";
 $dbPassword ="";
-$dbname="project";
+$dbname="database_name";
 
 $conn = new mysqli($host , $dbUsername , $dbPassword , $dbname);
 
@@ -23,8 +23,8 @@ die('Connect Error('.mysqli_connect_errno().')'.mysqli_connect_error());
 }else
 {
 
-$SELECT ="SELECT email From register where email = ? Limit 1";
-$INSERT ="INSERT Into register(name,email,phone,feedback) values(?,?,?,?)";
+$SELECT ="SELECT email From table_name where email = ? Limit 1";
+$INSERT ="INSERT Into table_name(name,email,phone,feedback) values(?,?,?,?)";
 
 $stmt =$conn->prepare($SELECT);
 $stmt->bind_param("s",$email);
@@ -44,7 +44,6 @@ include 'index.html';
 	window.onload=function(){alert("Thankyou We Will Contact You Shortly");}
 	</script>';
 
-	//echo "<font size='18' face='Arial' color='darkblue'><center><br><br><br><br>Thanks We Will Contact You Shortly</center>";
 }else
 {
 	include 'index.html';
@@ -52,7 +51,6 @@ include 'index.html';
 	window.onload=function(){alert("Email Already Registered");}
 	</script>';
 
-	//echo "<font size='18' face='Arial' color='red'><center><br><br><br><br>Email Already Registered</center>";
 }
 $stmt->close();
 $conn->close();
